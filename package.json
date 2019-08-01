@@ -1,7 +1,7 @@
 {
   "name": "@zifahm/uppy-cloudinary",
   "description": "Uppy plugin for Cloudinary",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "repository": "zifahm/uppy-cloudinary",
   "main": "dist/index.js",
   "module": "dist/uppy.esm.js",
