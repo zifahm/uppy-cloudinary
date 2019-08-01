@@ -70,26 +70,15 @@ export default class CloudinaryPlugin extends Uppy.Plugin {
     this.uppy.emit('upload-success', file, response);
   };
 
-  uploadFiles = (fileIDs: string[]) => {
+  uploadFiles = (fileIDs: string[]): Promise<any> => {
     return Promise.all(
-      fileIDs
-        .map(async id => {
-          const response = await this.uploadFile(id);
+      fileIDs.map(async id => {
+        const response = await this.uploadFile(id);
 
-          this.uppy.setFileState(id, {
-            response,
-          });
-        })
-        .map(promise =>
-          promise.finally(() => {
-            // Do nothing
-            fileIDs.forEach(id => {
-              const file = this.uppy.getFile(id);
-              // @ts-ignore
-              this.uppy.emit('preprocess-complete', file);
-            });
-          })
-        )
+        this.uppy.setFileState(id, {
+          response,
+        });
+      })
     );
   };
 
