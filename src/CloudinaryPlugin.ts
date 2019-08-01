@@ -100,3 +100,9 @@ export default class CloudinaryPlugin extends Uppy.Plugin {
     this.uppy.removeUploader(this.uploadFiles);
   }
 }
+
+declare module '@uppy/core' {
+  export interface Uppy {
+    use(pluginClass: typeof CloudinaryPlugin, opts: ClientProps): Uppy.Uppy;
+  }
+}
