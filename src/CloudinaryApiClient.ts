@@ -1,4 +1,4 @@
-import Uppy from '@uppy/core';
+import * as Uppy from '@uppy/core';
 import { PostParams, sendPostRequest } from './sendPostRequest';
 
 export interface SignatureParams {

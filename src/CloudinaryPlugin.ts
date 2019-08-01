@@ -1,4 +1,4 @@
-import Uppy from '@uppy/core';
+import * as Uppy from '@uppy/core';
 import CloudinaryApiClient, { ClientProps } from './CloudinaryApiClient';
 
 export default class CloudinaryPlugin extends Uppy.Plugin {
