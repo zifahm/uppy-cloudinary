@@ -32,5 +32,12 @@
     "typescript": "^3.5.3"
   },
   "author": "zifahm",
-  "license": "MIT"
+  "license": "MIT",
+  "keywords": [
+    "uppy cloudinary",
+    "cloudinary",
+    "uppy",
+    "uppy react cloudinary",
+    "cloudinary generate signature uppy"
+  ]
 }
